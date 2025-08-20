@@ -1,0 +1,2 @@
+# Test Data
+here are the dataset with the training notebook and the test to see if there is something interesting (the later may have french on it as it more like a draft and a testing notebook than a final version)
