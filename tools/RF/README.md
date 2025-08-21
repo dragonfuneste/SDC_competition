@@ -14,7 +14,7 @@ I made 3 RF :
 The required test data is stored with Git LFS.
 Hence you need to have Git LFS installed.
 For this, refer to the offical documentation: https://git-lfs.com
-
+  b
 After you have installed Git LFS, you can pull the large test data file(s) of this repository.
 ```bash
 git lfs pull
@@ -26,9 +26,23 @@ Then build and run the evaluator tool that uses the sample dataset and performs 
 ```bash
 cd tools/RF
 docker build -t main-image .
-run --rm --name main-container -t -p 4545:4545 main-image -p 4545  -m RF_model_3M.joblib -name RF-Selector
+docker run --rm --name main-container -t -p 4545:4545 main-image -p 4545  -m RF_model_3M.joblib -name RF-Selector
+```
+### OTHER run command (for the other model )
+1 metric model
+```bash
+docker run --rm --name main-container -t -p 4545:4545 main-image -p 4545  -m RF_model_1M.joblib -name RF-Selector
 ```
 
+2 metric model
+```bash
+docker run --rm --name main-container -t -p 4545:4545 main-image -p 4545  -m RF_model_2M.joblib -name RF-Selector
+```
+
+3 metric model
+```bash
+docker run --rm --name main-container -t -p 4545:4545 main-image -p 4545  -m RF_model_3M.joblib -name RF-Selector
+```
 ##  Next step
 After it you should open another terminal and put the evaluator command line : 
 ```bash
